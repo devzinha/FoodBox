@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>McBox</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap");
+
+      .inicio {
+        background: yellow;
+        border-radius: 80px;
+        color: red;
+        height: 100%;
+      }
+
+      :hover.inicio {
+        background: yellow;
+        border-radius: 80px;
+        color: white;
+        background: green;
+        height: 100%;
+        transition: 500ms ease-in-out;
+        width: 90%;
+      }
+
+      .text-inicio {
+        color: red;
+        font-family: "Ramabhadra", sans-serif;
+        font-size: 35px;
+        padding: 10px;
+      }
+
+      .back1 {
+        background: whitesmoke;
+      }
+
+      .produto {
+        background: yellow;
+        border-radius: 50px;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+
+      .fonte-title {
+        font-family: "Ramabhadra", sans-serif;
+        color: red;
+        font-size: 30px;
+        margin-right: 50px;
+      }
+
+      .text {
+        font-family: "Ramabhadra", sans-serif;
+        color: red;
+        font-size: 15px;
+      }
+
+      img {
+        width: 200px;
+        border-radius: 30px;
+        float: right;
+      }
+
+      .img1 {
+        width: 120px;
+        float: right;
+        border-radius: 0%;
+        margin-top: 60px;
+        margin-right: 100px;
+      }
+
+      .img2 {
+        width: 170px;
+        float: right;
+        border-radius: 0%;
+        margin-top: 35px;
+        margin-right: 35px;
+      }
+
+      .text3 {
+        font-family: "Ramabhadra", sans-serif;
+        color: red;
+        font-size: 20px;
+        margin-left: 20px;
+      }
+
+      .botao {
+        background: red;
+        text-align: center;
+        padding: 15px;
+        margin-top: 30px;
+        margin-bottom: 100px;
+        border-radius: 80px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        font-family: "Ramabhadra", sans-serif;
+      }
+
+      :hover.botao {
+        background: yellow;
+        border-radius: 80px;
+        color: white;
+        background: green;
+        height: 100%;
+        transition: 500ms ease-in-out;
+        width: 90%;
+      }
+    </style>
+  </head>
+  <body class="back1">
+    <div class="inicio text-inicio">
+      <img class="img1" src="https://i.imgur.com/63XOTX2.png" alt="" />
+      <h1>MC BOX</h1>
+    </div>
+
+    <h2 class="text3">Escolha o seu lacnhe:</h2>
+    <div id="cheddar" class="produto" onclick="escolherCheddar()">
+      <img src="https://i.imgur.com/RZFVYq5.png" alt="" />
+      <h2 class="fonte-title">Cheddar McMelt</h2>
+      <h3 class="text">
+        Feito com carne bovina, delicioso queijo tipo cheddar derretido, cebola
+        grelhada ao molho shoyu e para completar um pão escuro com gergelim.
+      </h3>
+      <h3 class="text3">R$ 22,90</h3>
+    </div>
+    <div id="carne" class="produto" onclick="escolherCarne()">
+      <img src="https://i.imgur.com/4b6wXpN.png" alt="" />
+      <h2 class="fonte-title">Big Mac</h2>
+      <h3 class="text">
+        Dois hambúrgueres, alface, queijo e molho especial, cebola e picles num
+        pão com gergelim. O sabor de McDonald's duplamente delicioso.
+      </h3>
+      <h3 class="text3">R$ 19,90</h3>
+    </div>
+    <div class="produto">
+      <img src="https://i.imgur.com/48zNg6w.png" alt="" />
+      <h2 class="fonte-title">Mc Chicken</h2>
+      <h3 class="text">
+        Frango empanado e dourado com molho suave e cremoso, acompanhado de
+        alface crocante num pão com gergelim.
+      </h3>
+      <h3 class="text3">R$ 15,90</h3>
+    </div>
+
+    <h2 class="text3">Escolha sua opção de batata:</h2>
+    <div id="batatas" class="produto" onclick="escolherBatata()">
+      <img class="img2" src="https://i.imgur.com/YUZNoGt.png" alt="" />
+      <h2 class="fonte-title">Batata Pequena</h2>
+      <h3 class="text">Peso: 84 gramas. Número de batatas: 65.</h3>
+      <h3 class="text3">R$ 8,00</h3>
+    </div>
+
+    <div id="batatas" class="produto" onclick="escolherBatata()">
+      <img class="img2" src="https://i.imgur.com/YUZNoGt.png" alt="" />
+      <h2 class="fonte-title">Batata Média</h2>
+      <h3 class="text">Peso: 108 gramas. Número de batatas: 69.</h3>
+      <h3 class="text3">R$ 10,00</h3>
+    </div>
+
+    <div id="batatas" class="produto" onclick="escolherBatata()">
+      <img class="img2" src="https://i.imgur.com/YUZNoGt.png" alt="" />
+      <h2 class="fonte-title">Batata Grande</h2>
+      <h3 class="text">Peso: 114 gramas. Número de batatas: 92.</h3>
+      <h3 class="text3">R$ 12,00</h3>
+    </div>
+
+    <div class="botao">
+      Finalizar pedido
+    </div>
+
+    <script>
+      function escolherCheddar() {
+        document.getElementById("cheddar").style.borderColor = "green";
+      }
+
+      function escolherCarne() {
+        document.getElementById("carne").style.borderColor = "green";
+      }
+    </script>
+  </body>
+</html>
